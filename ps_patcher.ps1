@@ -5,7 +5,7 @@
 class PatchInfo {
     # array of filenames to patch
     [string[]] $files
-    # if true, filenames will be assumed to be relative and expanded to full path (default = true)
+    # if true, filenames will be assumed to be relative and will be expanded to full path (default = true)
     [bool] $relative = $true
     # search and replace patterns, will be applied to every file in this entry
     # patterns looks like this: FFFF ?F -> 909090
@@ -120,7 +120,7 @@ function pattern_to_nibbles([string]$pattern) {
                     abort("Bad search pattern: '${pattern}' !")
                 }
             }
-            $high = $true;
+            $high = $true
         }
     }
     $search
